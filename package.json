@@ -21,7 +21,9 @@
     "url": "git://github.com/socketio/socket.io"
   },
   "scripts": {
-    "test": "nyc mocha --reporter spec --slow 200 --bail --timeout 10000 test/socket.io.js"
+    "test": "nyc mocha --reporter spec --slow 200 --bail --timeout 10000 test/socket.io.js",
+    "heroku-prebuild": "npm install && cd examples && cd chat && npm install",
+    "start": "npm start"
   },
   "dependencies": {
     "debug": "~4.1.0",
